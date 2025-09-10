@@ -1,233 +1,112 @@
-# {{PROJECT_NAME}}
+# Python Project Template
 
-A {{PROJECT_DESCRIPTION}}.
+�� **A comprehensive Python project template with modern tooling and Hello World functionality**
 
-## Features
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Template](https://img.shields.io/badge/template-ready-brightgreen.svg)
 
-- Feature 1
-- Feature 2  
-- Feature 3
+## ⚡ Quick Start
 
-## Installation
+### Option 1: Use GitHub Template (Recommended)
+1. Click **"Use this template"** button above
+2. Create your new repository  
+3. Clone your new repository
+4. Run the setup script:
+   ```bash
+   python setup_project.py
+   ```
 
-### From Source (Development)
-
+### Option 2: Manual Setup
 ```bash
-# Clone the repository
-git clone https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}.git
-cd {{PROJECT_NAME}}
+# Clone this template
+git clone https://github.com/alun1970/python-project-template.git my-new-project
+cd my-new-project
 
-# Install in development mode
-pip install -e .
+# Run setup script
+python setup_project.py
 ```
 
-### From Git Repository
+## 🎯 What You Get
 
+- **🏗️ Modern Structure**: `src/` layout with proper packaging
+- **📦 Build System**: `pyproject.toml` configuration  
+- **🧪 Testing**: pytest with comprehensive test setup
+- **🎨 Code Quality**: black, ruff, mypy integration
+- **📋 Development**: Comprehensive Makefile
+- **🚀 CI/CD**: GitHub Actions workflow
+- **📚 Documentation**: API docs, usage examples
+- **🤖 AI Ready**: GitHub Copilot integration
+- **👋 Example Code**: Hello World functionality with tests
+
+## 🛠️ Features
+
+### Ready-to-Use Development Environment
+- Virtual environment setup
+- Dependency management  
+- Code formatting and linting
+- Type checking
+- Automated testing
+
+### Make Commands
 ```bash
-pip install git+https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}.git
+make test-hello    # Quick Hello World test
+make demo-hello    # Hello World demo
+make test          # Run test suite
+make qa            # Full quality assurance
+make format        # Format code
+make build         # Build package
 ```
 
-### From PyPI (when published)
+### Template Variables
+The setup script replaces these automatically:
+- `{{PROJECT_NAME}}` → Your project name
+- `{{MODULE_NAME}}` → Python module name
+- `{{AUTHOR_NAME}}` → Your name
+- `{{AUTHOR_EMAIL}}` → Your email  
+- `{{GITHUB_USERNAME}}` → Your GitHub username
 
-```bash
-pip install {{PROJECT_NAME}}
-```
-
-## Quick Start
-
-### Hello World Example
-
-```python
-from {{MODULE_NAME}} import hello_world
-
-# Simple greeting
-print(hello_world())  # "Hello, World! Welcome to {{PROJECT_NAME}}!"
-
-# Personalized greeting  
-print(hello_world("Alice"))  # "Hello, Alice! Welcome to {{PROJECT_NAME}}!"
-```
-
-### Basic Usage
-
-```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}, main_function, hello_world
-
-# Using the hello world function
-greeting = hello_world("Developer")
-print(greeting)
-
-# Using the main class
-instance = {{MAIN_CLASS}}()
-greeting = instance.hello_world("User")
-print(greeting)
-
-# Basic processing
-result = main_function("example")
-print(result)
-```
-
-## Usage
-
-### Basic Usage
-
-```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}, hello_world
-
-# Hello World functionality
-print(hello_world())  # Basic greeting
-print(hello_world("Developer"))  # Personalized greeting
-
-# Using the main class
-instance = {{MAIN_CLASS}}()
-print(instance.hello_world("User"))  # Class method greeting
-
-# Basic processing
-result = instance.process("some data")
-print(result)
-```
-
-### Advanced Usage
-
-```python
-from {{MODULE_NAME}} import (
-    {{MAIN_CLASS}},
-    configure_settings,
-    utility_function,
-    hello_world
-)
-
-# Configure settings
-configure_settings({
-    "setting1": "value1",
-    "setting2": "value2"
-})
-
-# Advanced usage with configuration
-config = {"greeting_style": "formal", "debug": True}
-instance = {{MAIN_CLASS}}(config)
-
-# Use hello world with configured instance
-greeting = instance.hello_world("Administrator")
-print(greeting)
-
-# Advanced processing
-result = instance.advanced_process(data, {"mode": "enhanced"})
-```
-
-## Development
-
-### Setup Development Environment
-
-```bash
-# Clone and setup
-git clone https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}.git
-cd {{PROJECT_NAME}}
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install in development mode with dev dependencies
-pip install -e ".[dev]"
-```
-
-### Running Tests
-
-```bash
-# Run all tests
-make test
-
-# Quick test of Hello World functionality (no venv needed)
-make test-hello
-
-# Run Hello World demo
-make demo-hello
-
-# Run with coverage
-make test-coverage
-
-# Run specific test file
-python -m pytest tests/test_specific.py -v
-```
-
-### Quality Assurance
-
-```bash
-# Run full QA suite (tests, linting, formatting, type checking)
-make qa
-
-# Run individual checks
-make lint      # Linting with ruff
-make format    # Formatting with black
-make typecheck # Type checking with mypy
-```
-
-### Building and Publishing
-
-```bash
-# Clean previous builds
-make clean
-
-# Build package
-make build
-
-# Publish to PyPI (requires authentication)
-make publish
-```
-
-## Project Structure
+## 📁 Project Structure
 
 ```
-{{PROJECT_NAME}}/
-├── src/
-│   └── {{MODULE_NAME}}/
-│       ├── __init__.py
-│       ├── core.py
-│       ├── config.py
-│       ├── utils.py
-│       └── py.typed
-├── tests/
-│   ├── __init__.py
-│   ├── test_{{MODULE_NAME}}.py
-│   └── conftest.py
-├── examples/
-│   ├── basic_usage.py
-│   └── advanced_usage.py
-├── docs/
-│   ├── API.md
-│   └── USAGE.md
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── .copilot-instructions.md
-├── pyproject.toml
-├── Makefile
-├── requirements-dev.txt
-├── CHANGELOG.md
-├── LICENSE
-└── README.md
+your-project/
+├── src/your_module/          # Source code
+├── tests/                    # Test suite
+├── examples/                 # Usage examples
+├── docs/                     # Documentation
+├── .github/workflows/        # CI/CD
+├── pyproject.toml           # Project configuration
+├── Makefile                 # Development commands
+└── README.md                # Project documentation
 ```
 
-## Contributing
+## 🚀 Getting Started
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run the QA suite (`make qa`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+1. **Use this template** to create your repository
+2. **Clone** your new repository
+3. **Run setup script**: `python setup_project.py`
+4. **Activate environment**: `source venv/bin/activate`
+5. **Test**: `make test-hello`
+6. **Start coding!**
 
-## License
+## 📖 Documentation
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Template Setup**: See `TEMPLATE_README.md`
+- **Development**: Check the generated `README.md` in your new project
+- **API Documentation**: `docs/API.md`
+- **Usage Examples**: `examples/` directory
 
-## Changelog
+## 🤝 Contributing
 
-See [CHANGELOG.md](CHANGELOG.md) for a history of changes to this project.
+This template is designed to be a solid starting point. Feel free to:
+- Fork and customize for your needs
+- Submit improvements via pull requests
+- Report issues or suggestions
 
-## Support
+## 📄 License
 
-- Documentation: [docs/](docs/)
-- Issues: [GitHub Issues](https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}/issues)
-- Discussions: [GitHub Discussions](https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}/discussions)
+MIT License - see LICENSE file for details.
+
+---
+
+**Happy coding!** 🎉
