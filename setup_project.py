@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Template setup script for creating new Python projects.
+Template setup script for configuring Python projects in-place.
 
-This script replaces template variables with actual values and sets up a new project.
+This script replaces template variables with actual values and renames files/directories
+within the current directory. Designed for use with GitHub template repositories.
 """
 
 import os
 import re
-import shutil
 import sys
 from pathlib import Path
 
@@ -52,7 +52,7 @@ def rename_paths(base_path: Path, replacements: dict):
 
 
 def setup_project():
-    """Setup a new project from the template."""
+    """Configure the current directory as a new project from the template."""
     print("🚀 Python Project Template Setup")
     print("=" * 40)
     
@@ -107,25 +107,15 @@ def setup_project():
     print(f"   Author: {author_name} <{author_email}>")
     print(f"   GitHub: {github_username}")
     
-    confirm = input("\n✅ Continue with setup? (y/N): ").strip().lower()
+    confirm = input("\n✅ Continue with in-place setup? (y/N): ").strip().lower()
     if confirm not in ['y', 'yes']:
         print("❌ Setup cancelled.")
         sys.exit(0)
     
-    # Get target directory
-    target_dir = Path(input(f"\n📁 Target directory (default: ./{project_name}): ").strip())
-    if not target_dir.name:
-        target_dir = Path(f"./{project_name}")
-    
-    # Create target directory
-    if target_dir.exists():
-        print(f"❌ Directory {target_dir} already exists!")
-        sys.exit(1)
-    
-    # Copy template to target directory
-    template_dir = Path(__file__).parent
-    print(f"\n📋 Copying template to {target_dir}...")
-    shutil.copytree(template_dir, target_dir, ignore=shutil.ignore_patterns('setup_project.py', '.git', '__pycache__'))
+    # Work in the current directory
+    target_dir = Path('.')
+    print(f"\n📋 Setting up project in current directory...")
+    print(f"   Working directory: {target_dir.absolute()}")
     
     # Rename paths first
     print("🔧 Renaming files and directories...")
@@ -139,16 +129,15 @@ def setup_project():
             if file_path.suffix in ['.py', '.md', '.txt', '.toml', '.yml', '.yaml']:
                 replace_in_file(file_path, replacements)
     
-    print(f"\n🎉 Project {project_name} created successfully!")
-    print(f"📁 Location: {target_dir.absolute()}")
+    print(f"\n🎉 Project {project_name} configured successfully!")
+    print(f"📁 Current directory has been set up as your new project.")
     
     # Offer to set up virtual environment and install dependencies
-    setup_venv = input("\n� Set up virtual environment and install dependencies? (Y/n): ").strip().lower()
+    setup_venv = input("\n🔧 Set up virtual environment and install dependencies? (Y/n): ").strip().lower()
     if setup_venv in ['', 'y', 'yes']:
         print("\n🔧 Setting up virtual environment...")
         
         import subprocess
-        import sys
         
         try:
             # Create virtual environment
@@ -188,8 +177,7 @@ def setup_project():
                     print("❌ Hello World test failed:")
                     print(result.stderr)
             
-            print(f"\n�🚀 Next steps:")
-            print(f"   cd {target_dir}")
+            print(f"\n🚀 Next steps:")
             print(f"   {activate_cmd}")
             print("   make demo-hello  # Run Hello World demo")
             print("   make test        # Run full test suite")
@@ -199,7 +187,6 @@ def setup_project():
             print(f"❌ Error setting up virtual environment: {e}")
             print("You can set it up manually using the commands below.")
             print(f"\n🚀 Manual setup:")
-            print(f"   cd {target_dir}")
             print("   python -m venv venv")
             print(f"   {activate_cmd}")
             print("   pip install -e \".[dev]\"")
@@ -210,7 +197,6 @@ def setup_project():
     
     else:
         print("\n🚀 Manual setup steps:")
-        print(f"   cd {target_dir}")
         print("   python -m venv venv")
         if sys.platform == "win32":
             print("   venv\\Scripts\\activate")
