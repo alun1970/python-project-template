@@ -18,9 +18,9 @@ A comprehensive template for Python projects based on modern best practices and 
 ## Project Structure
 
 ```
-{{PROJECT_NAME}}/
+test-project/
 ├── src/
-│   └── {{MODULE_NAME}}/
+│   └── test_project/
 │       ├── __init__.py
 │       ├── core.py
 │       ├── config.py
@@ -29,7 +29,7 @@ A comprehensive template for Python projects based on modern best practices and 
 ├── tests/
 │   ├── __init__.py
 │   ├── conftest.py
-│   └── test_{{MODULE_NAME}}.py
+│   └── test_test_project.py
 ├── examples/
 │   ├── basic_usage.py
 │   └── advanced_usage.py
@@ -66,15 +66,15 @@ A comprehensive template for Python projects based on modern best practices and 
 1. Copy this template directory
 2. Rename it to your project name
 3. Replace all template variables throughout the codebase:
-   - `{{PROJECT_NAME}}` - Your project name (e.g., "my-awesome-project")
-   - `{{MODULE_NAME}}` - Your Python module name (e.g., "my_awesome_project")
-   - `{{PROJECT_DESCRIPTION}}` - Brief description of your project
-   - `{{AUTHOR_NAME}}` - Your name
-   - `{{AUTHOR_EMAIL}}` - Your email address
-   - `{{GITHUB_USERNAME}}` - Your GitHub username
-   - `{{MAIN_CLASS}}` - Main class name (e.g., "MyAwesomeProject")
+   - `test-project` - Your project name (e.g., "my-awesome-project")
+   - `test_project` - Your Python module name (e.g., "my_awesome_project")
+   - `A test Python project` - Brief description of your project
+   - `Test Author` - Your name
+   - `test@example.com` - Your email address
+   - `testuser` - Your GitHub username
+   - `TestProject` - Main class name (e.g., "MyAwesomeProject")
 
-4. Rename the module directory: `src/{{MODULE_NAME}}/` → `src/your_module_name/`
+4. Rename the module directory: `src/test_project/` → `src/your_module_name/`
 5. Update test files accordingly
 
 ## Development Setup
@@ -117,13 +117,13 @@ When setting up a new project, replace these template variables:
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `{{PROJECT_NAME}}` | Project name | "my-awesome-project" |
-| `{{MODULE_NAME}}` | Python module name | "my_awesome_project" |
-| `{{PROJECT_DESCRIPTION}}` | Project description | "An awesome Python project" |
-| `{{AUTHOR_NAME}}` | Author name | "John Doe" |
-| `{{AUTHOR_EMAIL}}` | Author email | "john@example.com" |
-| `{{GITHUB_USERNAME}}` | GitHub username | "johndoe" |
-| `{{MAIN_CLASS}}` | Main class name | "MyAwesomeProject" |
+| `test-project` | Project name | "my-awesome-project" |
+| `test_project` | Python module name | "my_awesome_project" |
+| `A test Python project` | Project description | "An awesome Python project" |
+| `Test Author` | Author name | "John Doe" |
+| `test@example.com` | Author email | "john@example.com" |
+| `testuser` | GitHub username | "johndoe" |
+| `TestProject` | Main class name | "MyAwesomeProject" |
 
 ## Included Tools and Configurations
 

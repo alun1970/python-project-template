@@ -2,14 +2,14 @@
 
 ## Core Classes
 
-### {{MAIN_CLASS}}
+### TestProject
 
-The main class for {{PROJECT_NAME}}.
+The main class for test-project.
 
 ```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}
+from test_project import TestProject
 
-instance = {{MAIN_CLASS}}(config=None)
+instance = TestProject(config=None)
 ```
 
 #### Parameters
@@ -30,7 +30,7 @@ Process data using the configured settings.
 
 **Example:**
 ```python
-instance = {{MAIN_CLASS}}()
+instance = TestProject()
 result = instance.process("Hello, World!")
 ```
 
@@ -47,7 +47,7 @@ Advanced processing with additional options.
 
 **Example:**
 ```python
-instance = {{MAIN_CLASS}}()
+instance = TestProject()
 options = {"mode": "advanced"}
 result = instance.advanced_process("data", options)
 ```
@@ -66,7 +66,7 @@ Main function for simple operations.
 
 **Example:**
 ```python
-from {{MODULE_NAME}} import main_function
+from test_project import main_function
 
 result = main_function("Hello, World!")
 ```
@@ -80,7 +80,7 @@ Configure global settings.
 
 **Example:**
 ```python
-from {{MODULE_NAME}} import configure_settings
+from test_project import configure_settings
 
 configure_settings({
     "setting1": "value1",
@@ -97,7 +97,7 @@ Get current configuration settings.
 
 **Example:**
 ```python
-from {{MODULE_NAME}} import get_settings
+from test_project import get_settings
 
 current_config = get_settings()
 ```
@@ -127,9 +127,9 @@ Helper function to process a list of items.
 
 ## Exceptions
 
-### `{{MODULE_NAME}}Error`
+### `test_projectError`
 
-Base exception for {{PROJECT_NAME}}.
+Base exception for test-project.
 
 ### `ConfigurationError`
 

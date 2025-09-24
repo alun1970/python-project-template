@@ -60,11 +60,11 @@ make build         # Build package
 
 ### Template Variables
 The setup script replaces these automatically:
-- `{{PROJECT_NAME}}` → Your project name
-- `{{MODULE_NAME}}` → Python module name
-- `{{AUTHOR_NAME}}` → Your name
-- `{{AUTHOR_EMAIL}}` → Your email  
-- `{{GITHUB_USERNAME}}` → Your GitHub username
+- `test-project` → Your project name
+- `test_project` → Python module name
+- `Test Author` → Your name
+- `test@example.com` → Your email  
+- `testuser` → Your GitHub username
 
 ## 📁 Project Structure
 

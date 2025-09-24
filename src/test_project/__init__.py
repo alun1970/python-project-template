@@ -1,5 +1,5 @@
 """
-{{PROJECT_NAME}} - {{PROJECT_DESCRIPTION}}
+test-project - A test Python project
 
 This package provides [brief description of functionality].
 
@@ -9,27 +9,27 @@ Key features:
 - Feature 3
 """
 
-from .core import (
-    {{MAIN_CLASS}},
-    main_function,
-    hello_world,
-)
 from .config import (
     configure_settings,
     get_settings,
 )
+from .core import (
+    TestProject,
+    hello_world,
+    main_function,
+)
 from .utils import (
-    utility_function,
     helper_function,
+    utility_function,
 )
 
 __version__ = "0.1.0"
-__author__ = "{{AUTHOR_NAME}}"
-__email__ = "{{AUTHOR_EMAIL}}"
+__author__ = "Test Author"
+__email__ = "test@example.com"
 
 __all__ = [
     # Core functionality
-    "{{MAIN_CLASS}}",
+    "TestProject",
     "main_function",
     "hello_world",
     # Configuration

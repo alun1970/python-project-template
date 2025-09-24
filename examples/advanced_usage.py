@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Advanced usage example for {{PROJECT_NAME}}.
+Advanced usage example for test-project.
 
 This example demonstrates advanced features and configuration options.
 """
@@ -11,8 +11,8 @@ from pathlib import Path
 # Add the src directory to the path for direct imports during development
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-# from {{MODULE_NAME}} import (
-#     {{MAIN_CLASS}},
+# from test_project import (
+#     TestProject,
 #     configure_settings,
 #     get_settings,
 #     utility_function,
@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 def main():
     """Demonstrate advanced usage."""
-    print("=== {{PROJECT_NAME}} Advanced Usage Example ===\n")
+    print("=== test-project Advanced Usage Example ===\n")
 
     # Example 1: Global configuration
     print("1. Global configuration:")
@@ -36,7 +36,7 @@ def main():
 
     # Example 2: Advanced processing
     print("2. Advanced processing:")
-    # instance = {{MAIN_CLASS}}()
+    # instance = TestProject()
     # options = {
     #     "mode": "advanced",
     #     "transform": True,
@@ -50,7 +50,7 @@ def main():
     # data = ["item1", "item2", "item3"]
     # processed_data = helper_function(data, transform=True)
     # print(f"Processed data: {processed_data}")
-    # 
+    #
     # utility_result = utility_function(processed_data)
     # print(f"Utility result: {utility_result}\n")
 
@@ -65,13 +65,13 @@ def main():
     # Example 5: Batch processing
     print("5. Batch processing:")
     # items_to_process = ["data1", "data2", "data3", "data4"]
-    # instance = {{MAIN_CLASS}}()
-    # 
+    # instance = TestProject()
+    #
     # results = []
     # for i, item in enumerate(items_to_process):
     #     result = instance.process(f"{item}_batch_{i}")
     #     results.append(result)
-    # 
+    #
     # print(f"Batch results: {results}\n")
 
     print("=== Advanced Example Complete ===")

@@ -3,16 +3,16 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "{{PROJECT_NAME}}"
+name = "test-project"
 version = "0.1.0"
-description = "{{PROJECT_DESCRIPTION}}"
+description = "A test Python project"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "{{AUTHOR_NAME}}", email = "{{AUTHOR_EMAIL}}"}
+    {name = "Test Author", email = "test@example.com"}
 ]
 maintainers = [
-    {name = "{{AUTHOR_NAME}}", email = "{{AUTHOR_EMAIL}}"}
+    {name = "Test Author", email = "test@example.com"}
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -49,16 +49,16 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}"
-Repository = "https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}"
-Issues = "https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}/issues"
-Documentation = "https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}/README.md"
+Homepage = "https://github.com/testuser/test-project"
+Repository = "https://github.com/testuser/test-project"
+Issues = "https://github.com/testuser/test-project/issues"
+Documentation = "https://github.com/testuser/test-project/README.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-"{{MODULE_NAME}}" = ["py.typed"]
+"test_project" = ["py.typed"]
 
 [tool.black]
 line-length = 88

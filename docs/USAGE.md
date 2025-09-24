@@ -1,20 +1,20 @@
 # Usage Guide
 
-This guide provides detailed information on how to use {{PROJECT_NAME}}.
+This guide provides detailed information on how to use test-project.
 
 ## Installation
 
 ```bash
-pip install {{PROJECT_NAME}}
+pip install test-project
 ```
 
 ## Quick Start
 
 ```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}
+from test_project import TestProject
 
 # Create an instance
-instance = {{MAIN_CLASS}}()
+instance = TestProject()
 
 # Process some data
 result = instance.process("Hello, World!")
@@ -28,7 +28,7 @@ print(result)
 You can configure global settings that affect all instances:
 
 ```python
-from {{MODULE_NAME}} import configure_settings
+from test_project import configure_settings
 
 configure_settings({
     "setting1": "custom_value",
@@ -42,14 +42,14 @@ configure_settings({
 You can also configure individual instances:
 
 ```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}
+from test_project import TestProject
 
 config = {
     "setting1": "instance_value",
     "debug": False
 }
 
-instance = {{MAIN_CLASS}}(config=config)
+instance = TestProject(config=config)
 ```
 
 ## Advanced Usage
@@ -57,9 +57,9 @@ instance = {{MAIN_CLASS}}(config=config)
 ### Custom Processing Options
 
 ```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}
+from test_project import TestProject
 
-instance = {{MAIN_CLASS}}()
+instance = TestProject()
 
 # Advanced processing with options
 options = {
@@ -74,19 +74,19 @@ result = instance.advanced_process("data", options)
 ### Error Handling
 
 ```python
-from {{MODULE_NAME}} import {{MAIN_CLASS}}, {{MODULE_NAME}}Error
+from test_project import TestProject, test_projectError
 
 try:
-    instance = {{MAIN_CLASS}}()
+    instance = TestProject()
     result = instance.process("data")
-except {{MODULE_NAME}}Error as e:
+except test_projectError as e:
     print(f"Processing failed: {e}")
 ```
 
 ### Utility Functions
 
 ```python
-from {{MODULE_NAME}} import utility_function, helper_function
+from test_project import utility_function, helper_function
 
 # Use utility functions
 result = utility_function("some data")
@@ -123,7 +123,7 @@ See the `examples/` directory for complete working examples:
 Enable debug mode for more detailed logging:
 
 ```python
-from {{MODULE_NAME}} import configure_settings
+from test_project import configure_settings
 
 configure_settings({"debug": True})
 ```

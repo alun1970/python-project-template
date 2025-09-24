@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hello World example for {{PROJECT_NAME}}.
+Hello World example for test-project.
 
 This script demonstrates basic hello world functionality.
 """
@@ -12,33 +12,33 @@ from pathlib import Path
 src_path = Path(__file__).parent.parent / "src"
 sys.path.insert(0, str(src_path))
 
-from {{MODULE_NAME}} import {{MAIN_CLASS}}, hello_world
+from test_project import TestProject, hello_world  # noqa: E402
 
 
-def main():
+def main() -> None:
     """Main function demonstrating hello world functionality."""
-    print("🌟 {{PROJECT_NAME}} - Hello World Demo")
+    print("🌟 test-project - Hello World Demo")
     print("=" * 50)
-    
+
     # Using the standalone hello_world function
     print("\n1. Standalone function:")
     print(f"   {hello_world()}")
     print(f"   {hello_world('Alice')}")
     print(f"   {hello_world('Developer')}")
-    
+
     # Using the class method
     print("\n2. Class method:")
-    instance = {{MAIN_CLASS}}()
+    instance = TestProject()
     print(f"   {instance.hello_world()}")
     print(f"   {instance.hello_world('Bob')}")
     print(f"   {instance.hello_world('World')}")
-    
+
     # With configuration
     print("\n3. With configuration:")
     config = {"greeting_style": "friendly"}
-    configured_instance = {{MAIN_CLASS}}(config)
+    configured_instance = TestProject(config)
     print(f"   {configured_instance.hello_world('Team')}")
-    
+
     print("\n✅ Hello World demo completed!")
 
 

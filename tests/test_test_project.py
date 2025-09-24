@@ -1,12 +1,10 @@
-"""Tests for {{PROJECT_NAME}}."""
+"""Tests for test-project."""
 
 from unittest.mock import patch
 
-import pytest
-
 # Note: These imports will need to be updated when the template is used
-# from {{MODULE_NAME}} import (
-#     {{MAIN_CLASS}},
+# from test_project import (
+#     TestProject,
 #     configure_settings,
 #     get_settings,
 #     hello_world,
@@ -22,14 +20,14 @@ class TestHelloWorld:
         """Test hello_world function without name."""
         # result = hello_world()
         # assert "Hello, World!" in result
-        # assert "{{PROJECT_NAME}}" in result
+        # assert "test-project" in result
         pass
 
     def test_hello_world_with_name(self):
         """Test hello_world function with name."""
         # result = hello_world("Alice")
         # assert "Hello, Alice!" in result
-        # assert "{{PROJECT_NAME}}" in result
+        # assert "test-project" in result
         pass
 
     def test_hello_world_empty_string(self):
@@ -42,7 +40,7 @@ class TestHelloWorld:
         """Test hello_world function with special characters."""
         # result = hello_world("José")
         # assert "Hello, José!" in result
-        # assert "{{PROJECT_NAME}}" in result
+        # assert "test-project" in result
         pass
 
 
@@ -51,26 +49,26 @@ class TestMainClassHelloWorld:
 
     def test_class_hello_world_no_name(self):
         """Test class hello_world method without name."""
-        # instance = {{MAIN_CLASS}}()
+        # instance = TestProject()
         # result = instance.hello_world()
         # assert "Hello, World!" in result
-        # assert "{{PROJECT_NAME}}" in result
+        # assert "test-project" in result
         pass
 
     def test_class_hello_world_with_name(self):
         """Test class hello_world method with name."""
-        # instance = {{MAIN_CLASS}}()
+        # instance = TestProject()
         # result = instance.hello_world("Bob")
         # assert "Hello, Bob!" in result
-        # assert "{{PROJECT_NAME}}" in result
+        # assert "test-project" in result
         pass
 
     def test_class_hello_world_with_config(self, sample_config):
         """Test class hello_world method with configuration."""
-        # instance = {{MAIN_CLASS}}(config=sample_config)
+        # instance = TestProject(config=sample_config)
         # result = instance.hello_world("Developer")
         # assert "Hello, Developer!" in result
-        # assert "{{PROJECT_NAME}}" in result
+        # assert "test-project" in result
         pass
 
 
@@ -79,19 +77,19 @@ class TestMainClass:
 
     def test_init_default(self):
         """Test initialization with default parameters."""
-        # instance = {{MAIN_CLASS}}()
+        # instance = TestProject()
         # assert instance.config == {}
         pass
 
     def test_init_with_config(self, sample_config):
         """Test initialization with custom config."""
-        # instance = {{MAIN_CLASS}}(config=sample_config)
+        # instance = TestProject(config=sample_config)
         # assert instance.config == sample_config
         pass
 
     def test_process_basic(self, sample_data):
         """Test basic processing functionality."""
-        # instance = {{MAIN_CLASS}}()
+        # instance = TestProject()
         # result = instance.process(sample_data["text"])
         # assert "Processed:" in result
         # assert sample_data["text"] in result
@@ -99,7 +97,7 @@ class TestMainClass:
 
     def test_advanced_process(self, sample_data):
         """Test advanced processing functionality."""
-        # instance = {{MAIN_CLASS}}()
+        # instance = TestProject()
         # options = {"mode": "advanced"}
         # result = instance.advanced_process(sample_data["text"], options)
         # assert "Advanced processed:" in result
@@ -151,8 +149,8 @@ class TestErrorHandling:
 
     def test_custom_exceptions(self):
         """Test that custom exceptions can be raised."""
-        # with pytest.raises({{MODULE_NAME}}Error):
-        #     raise {{MODULE_NAME}}Error("Test error")
+        # with pytest.raises(test_projectError):
+        #     raise test_projectError("Test error")
         pass
 
 
@@ -162,16 +160,16 @@ class TestIntegration:
     def test_full_workflow(self, sample_data, sample_config):
         """Test a complete workflow."""
         # configure_settings(sample_config)
-        # instance = {{MAIN_CLASS}}(config=sample_config)
+        # instance = TestProject(config=sample_config)
         # result = instance.process(sample_data["text"])
         # assert result is not None
         pass
 
-    @patch('{{MODULE_NAME}}.core.{{MAIN_CLASS}}.process')
+    @patch("test_project.core.TestProject.process")
     def test_mocked_processing(self, mock_process, sample_data):
         """Test with mocked processing."""
         # mock_process.return_value = "mocked result"
-        # instance = {{MAIN_CLASS}}()
+        # instance = TestProject()
         # result = instance.process(sample_data["text"])
         # assert result == "mocked result"
         # mock_process.assert_called_once_with(sample_data["text"])

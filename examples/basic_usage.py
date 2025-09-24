@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Basic usage example for {{PROJECT_NAME}}.
+Basic usage example for test-project.
 
 This example demonstrates the basic functionality of the package.
 """
@@ -11,12 +11,12 @@ from pathlib import Path
 # Add the src directory to the path for direct imports during development
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-# from {{MODULE_NAME}} import {{MAIN_CLASS}}, main_function, hello_world
+# from test_project import TestProject, main_function, hello_world
 
 
 def main():
     """Demonstrate basic usage."""
-    print("=== {{PROJECT_NAME}} Basic Usage Example ===\n")
+    print("=== test-project Basic Usage Example ===\n")
 
     # Example 1: Hello World functionality
     print("1. Hello World examples:")
@@ -31,7 +31,7 @@ def main():
 
     # Example 3: Using the main class
     print("3. Using main class:")
-    # instance = {{MAIN_CLASS}}()
+    # instance = TestProject()
     # print(f"Hello from class: {instance.hello_world('User')}")
     # result = instance.process("Sample data")
     # print(f"Process result: {result}\n")
@@ -39,7 +39,7 @@ def main():
     # Example 4: With configuration
     print("4. With custom configuration:")
     # config = {"setting1": "custom_value", "debug": True}
-    # instance = {{MAIN_CLASS}}(config=config)
+    # instance = TestProject(config=config)
     # print(f"Configured greeting: {instance.hello_world('Admin')}")
     # result = instance.process("Configured processing")
     # print(f"Process result: {result}\n")
